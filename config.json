@@ -1,0 +1,28 @@
+{
+  "inbounds": [
+    {
+      "port": 10000,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "ваш-uuid",
+            "alterId": 64
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "ws",
+        "wsSettings": {
+          "path": "/your-path"
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}

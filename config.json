@@ -1,20 +1,32 @@
 {
+  "log": {
+    "access": "/etc/v2ray/access.log",
+    "error": "/etc/v2ray/error.log",
+    "loglevel": "info"
+  },
   "inbounds": [
     {
-      "port": 10000,
+      "port": 443,
       "protocol": "vmess",
+      "listen": "0.0.0.0",
       "settings": {
         "clients": [
           {
-            "id": "ваш-uuid",
-            "alterId": 64
+            "id": "d1990337-5c98-4de4-995f-e486310b7349",
+            "alterId": 0
           }
         ]
       },
       "streamSettings": {
-        "network": "ws",
-        "wsSettings": {
-          "path": "/your-path"
+        "network": "tcp",
+        "security": "tls",
+        "tlsSettings": {
+          "certificates": [
+            {
+              "certificateFile": "/etc/v2ray/cert.pem",
+              "keyFile": "/etc/v2ray/key.pem" 
+            }
+          ]
         }
       }
     }
